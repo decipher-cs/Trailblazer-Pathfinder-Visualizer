@@ -2,10 +2,10 @@ import { Box, Button } from '@mui/material'
 import './App.css'
 import Grid from './components/Grid'
 import GridConfig from './components/GridConfig'
-import {  useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Settings } from '@mui/icons-material'
 import { FabGroup } from './components/FabGroup'
-import { AnimationPlaybackControls, motion, useAnimate } from 'framer-motion'
+import { AnimationPlaybackControls, animations, motion, useAnimate } from 'framer-motion'
 import { AlgorithmReturnType, Grid as TGrid, SearchAlgorithm } from './types'
 import { useGridConfig } from './stateStore/gridConfigStore'
 
@@ -55,7 +55,7 @@ function App() {
         const controllers = arr.map((v, i) => {
             const controller = animate(
                 'div.cellIndex' + v,
-                { scale: [null, 0.3, 1, null] },
+                { scale: [null, 0.3, 1] },
                 {
                     delay,
                     onComplete() {

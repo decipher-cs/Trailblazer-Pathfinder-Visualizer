@@ -66,6 +66,10 @@ const GridConfig = forwardRef((props: { style?: CSSProperties }, ref) => {
                     onChange={e => {
                         const algo = e.target.value as SearchAlgorithm
                         if (!searchAlgorithms.includes(algo)) throw new Error('Unsupported algorithm selected')
+                        if (algo === 'bfs')
+                            alert(
+                                "Note that BFS algorithm can take a while to find a path if the grid is too big. That's just the nature of this algorithm.",
+                            )
                         changeSelectedAlgorithm(algo)
                     }}
                 >
@@ -116,17 +120,21 @@ const GridConfig = forwardRef((props: { style?: CSSProperties }, ref) => {
                 <TextField
                     fullWidth
                     type='number'
-                    InputProps={{ endAdornment: 'X' }}
+                    InputProps={{ endAdornment: 'ms' }}
                     size='small'
-                    inputProps={{ min: 0, max: 90 }}
+                    inputProps={{ min: 0, max: 100 }}
                     required
                     label='animation speed'
                     value={animationSpeed}
                     onChange={e => {
                         const value = Number(e.target.value)
-                        if (typeof value === 'number') changeAnimationSpeed(value)
+                        if (typeof value === 'number') {
+                            if (value < 0) changeAnimationSpeed(0)
+                            else if (value > 100) changeAnimationSpeed(100)
+                            else changeAnimationSpeed(value)
+                        }
                     }}
-                    helperText='Greater value yields faster animation'
+                    helperText='Smaller value yields faster animation'
                 />
             </StyledSurface>
 
