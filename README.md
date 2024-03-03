@@ -49,6 +49,9 @@ Faster and cleaner looking implementation of trainlblazer v1. Better than its an
 -   [x] Improve recursive DFS algorithm using DP.
 -   [ ] Respect user's "prefers-reduced-motion" settings using useReducedMotion from framer-motion.
 -   [ ] Add new input to tweek the chances of a wall getting places when running `Math.floor(Math.random() * 3.5)`. Replace `3.5` with variable.
+-   [ ] Make BFS run a faster, or the at very least provide a way to cancel the ongoing algorithm.
+-   [ ] Show the current running state of the algorithm on the "solve" button. If algorithm is processing, disable the button or show a spinner.
+-   [ ] Reduce the chunk size by code-splitting
 
 ## Known Issues
 
