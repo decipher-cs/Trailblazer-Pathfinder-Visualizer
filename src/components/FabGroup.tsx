@@ -73,21 +73,20 @@ export const FabGroup = (props: FabGroupProps) => {
                             }),
                         )
 
+                        const finishCell = grid.find(c => c.type === 'finish')
+                        const startCell = grid.find(c => c.type === 'start')
+
+                        if (startCell === undefined || finishCell === undefined) {
+                            alert('You need to place a starting and an ending point. Try clicking the cells.')
+                            return
+                        }
+
                         const { pathTaken, shortestPath } = await solveGrid(grid, columns, selectedAlgorithm)
 
-                        const startingCell = pathTaken.shift()
+                        const firstVisitedCell = pathTaken.shift()
                         const lastVisitedCell = pathTaken.pop()
-                        const finishCell = grid.find(c => c.type === 'finish')
 
-                        if (startingCell === undefined) {
-                            throw new Error(
-                                'Start cell not found while evaluating result. This is unexpected behaviour',
-                            )
-                        }
-
-                        if (pathTaken.length < 1) {
-                            alert('Could not react the finishing cell. No paths lead it.')
-                        }
+                        if (pathTaken.length < 1) alert('Could not react the finishing cell. No paths lead it.')
 
                         const onComplete = () => {
                             if (finishCell?.index !== lastVisitedCell || pathTaken.length < 1) {
