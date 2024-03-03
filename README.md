@@ -16,7 +16,7 @@ Faster and cleaner looking implementation of trainlblazer v1. Better than its an
 
 ## Preview
 
-![preview gif](./public/trailblazer.gif)
+![preview gif](./public/pathfinder.mp4)
 
 ## Features
 
