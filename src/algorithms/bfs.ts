@@ -54,7 +54,6 @@ export function bfs(gridWithoutCoordinates: GridWithoutCoordinates, columns: num
 
     while (queue.nodes.length) {
         const currentNode = queue.dequeue()
-        console.log(queue.nodes.length, currentNode)
 
         if (!currentNode) continue
 
@@ -73,7 +72,6 @@ export function bfs(gridWithoutCoordinates: GridWithoutCoordinates, columns: num
             }
         }
     }
-    console.log('done', visitedNodes)
 
     return { pathTaken: Array.from(visitedNodes), shortestPath: null }
 }
