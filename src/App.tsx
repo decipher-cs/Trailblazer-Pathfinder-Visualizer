@@ -5,7 +5,7 @@ import GridConfig from './components/GridConfig'
 import { useRef, useState } from 'react'
 import { Settings } from '@mui/icons-material'
 import { FabGroup } from './components/FabGroup'
-import { AnimationPlaybackControls, animations, motion, useAnimate } from 'framer-motion'
+import { AnimationPlaybackControls, m, useAnimate } from 'framer-motion'
 import { AlgorithmReturnType, Grid as TGrid, SearchAlgorithm } from './types'
 import { useGridConfig } from './stateStore/gridConfigStore'
 
@@ -77,7 +77,7 @@ function App() {
 
     return (
         <Box
-            component={motion.div}
+            component={m.div}
             animate={{ gridTemplateColumns: areSettingsVisible ? '30% 1fr' : '0% 1fr' }}
             sx={{
                 height: '100svh',

@@ -44,6 +44,7 @@ export const FabGroup = (props: FabGroupProps) => {
             </Fab>
 
             <Fab
+                aria-label='reset grid'
                 onClick={() => {
                     cancelAnimations()
                     setGrid(p =>

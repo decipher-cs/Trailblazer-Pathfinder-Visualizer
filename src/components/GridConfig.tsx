@@ -13,7 +13,7 @@ import {
 import { CSSProperties, forwardRef, memo } from 'react'
 import { SearchAlgorithm, searchAlgorithms } from '../types'
 import { constructGrid, insertWallsAtRandom, useGridConfig } from '../stateStore/gridConfigStore'
-import { motion } from 'framer-motion'
+import { m } from 'framer-motion'
 import { useShallow } from 'zustand/react/shallow'
 
 const GridConfig = forwardRef((props: { style?: CSSProperties }, ref) => {
@@ -42,7 +42,7 @@ const GridConfig = forwardRef((props: { style?: CSSProperties }, ref) => {
     return (
         <Box
             ref={ref}
-            component={motion.div}
+            component={m.div}
             sx={{
                 height: '100%',
                 width: '30vw',
