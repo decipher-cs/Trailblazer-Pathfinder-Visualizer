@@ -1,5 +1,5 @@
-import { Box, CircularProgress } from '@mui/material'
-import { motion } from 'framer-motion'
+import { Box } from '@mui/material'
+import { m } from 'framer-motion'
 import { memo } from 'react'
 import { Cell } from '../types'
 import { useGridConfig } from '../stateStore/gridConfigStore'
@@ -49,7 +49,7 @@ const Cell = (props: CellProps) => {
         <Box
             aria-label={'cell ' + cell.index}
             className={'cellIndex' + cell.index}
-            component={motion.div}
+            component={m.div}
             animate={cell.visitedStatus === 'visited' ? 'visited' : cell.type}
             variants={{
                 visited: { scale: 1.3 },
