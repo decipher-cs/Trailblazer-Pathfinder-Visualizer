@@ -52,6 +52,7 @@ Faster and cleaner looking implementation of trainlblazer v1. Better than its an
 -   [ ] Make BFS run a faster, or the at very least provide a way to cancel the ongoing algorithm.
 -   [ ] Show the current running state of the algorithm on the "solve" button. If algorithm is processing, disable the button or show a spinner.
 -   [ ] Reduce the chunk size by code-splitting
+-   [ ] The "insert walls randomly" button blocks main thread on large grids. Make it non blocking.
 
 ## Known Issues
 
