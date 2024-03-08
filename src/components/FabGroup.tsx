@@ -113,7 +113,7 @@ export const FabGroup = (props: FabGroupProps) => {
 
                         animateCellWithStagger(pathTaken, onComplete)
                     } catch (err) {
-                        alert('caught error: ' + err)
+                        alert('Error whilte trying to solve grid. ' + err)
                     }
                 }}
             >

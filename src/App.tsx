@@ -52,23 +52,31 @@ function App() {
         if (ongoingAnimationControllers.current.length > 0) cancelAnimations()
 
         let delay = 0
-        const controllers = arr.map((v, i) => {
-            const controller = animate(
-                'div.cellIndex' + v,
-                { scale: [null, 0.3, 1] },
-                {
-                    delay,
-                    onComplete() {
-                        if (i === arr.length - 1) {
-                            postAnimation()
-                            ongoingAnimationControllers.current = []
-                        }
+        let controllers = []
+
+        for (let i = 0; i < arr.length; i++) {
+            try {
+                const controller = animate(
+                    'div.cellIndex' + arr[i],
+                    { scale: [null, 0.3, 1] },
+                    {
+                        delay,
+                        onComplete() {
+                            if (i === arr.length - 1) {
+                                postAnimation()
+                                ongoingAnimationControllers.current = []
+                            }
+                        },
                     },
-                },
-            )
-            delay += animationSpeed / 1000
-            return controller
-        })
+                )
+                delay += animationSpeed / 1000
+                controllers.push(controller)
+            } catch (err) {
+                controllers = []
+                postAnimation()
+                break
+            }
+        }
 
         ongoingAnimationControllers.current.push(...controllers)
 
