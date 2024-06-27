@@ -17,7 +17,7 @@ Solve mazes and visualize algorithms like BFS, Dijkstra, Astar, and DFS. Try it 
 
 ## Preview
 
-![preview gif](/public/pathfinder.mp4)
+![preview gif](https://github.com/decipher-cs/Trailblazer-Pathfinder-Visualizer/blob/main/public/pathfinder.gif)
 
 ## Features
 
