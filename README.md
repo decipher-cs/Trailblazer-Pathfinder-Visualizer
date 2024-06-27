@@ -1,34 +1,35 @@
 # Trailblazer v2.0
 
-Faster and cleaner looking implementation of trainlblazer v1. Better than its ancestor in every regard.
+Solve mazes and visualize algorithms like BFS, Dijkstra, Astar, and DFS. Try it live path-visualize.netlify.app/
+<i>Faster and cleaner looking implementation of trainlblazer v1. Better than its ancestor in every regard.</i>
 
 ## Table of Contents
 
--   [Preview](#)
--   [Features](#)
--   [Whats Improved](#)
--   [Installation](#)
--   [Tech Used](#tech-used)
--   [Goals](#)
--   [Known Issues](#known-issues)
--   [Acknowledgment](#)
--   [License](#license)
+- [Preview](#)
+- [Features](#)
+- [Whats Improved](#)
+- [Installation](#)
+- [Tech Used](#tech-used)
+- [Goals](#)
+- [Known Issues](#known-issues)
+- [Acknowledgment](#)
+- [License](#license)
 
 ## Preview
 
-![preview gif](./public/pathfinder.mp4)
+![preview gif](/public/pathfinder.mp4)
 
 ## Features
 
--   Highly performent.
--   Support for various algorithms.
--   Soft design.
--   Web workers to free the main thread while solving the 'maze'
+- Highly performent.
+- Support for various algorithms.
+- Soft design.
+- Web workers to free the main thread while solving the 'maze'
 
 ## Whats Improvmented
 
--   Added framer motion for better animation
--   Included zustand for state managment
+- Added framer motion for better animation
+- Included zustand for state managment
 
 ## Installation
 
@@ -36,35 +37,35 @@ Faster and cleaner looking implementation of trainlblazer v1. Better than its an
 
 ## Tech Used
 
--   Typescript
--   React
--   MUI
--   Vite
--   Framer Motion
--   Zustand
+- Typescript
+- React
+- MUI
+- Vite
+- Framer Motion
+- Zustand
 
 ## Goals
 
--   [x] Support dynamic sized grids.
--   [x] Improve recursive DFS algorithm using DP.
--   [ ] Respect user's "prefers-reduced-motion" settings using useReducedMotion from framer-motion.
--   [ ] Add new input to tweek the chances of a wall getting places when running `Math.floor(Math.random() * 3.5)`. Replace `3.5` with variable.
--   [ ] Make BFS run a faster, or the at very least provide a way to cancel the ongoing algorithm.
--   [ ] Show the current running state of the algorithm on the "solve" button. If algorithm is processing, disable the button or show a spinner.
--   [ ] Reduce the chunk size by code-splitting
--   [ ] The "insert walls randomly" button blocks main thread on large grids. Make it non blocking.
--   [ ] Center the grid inside the container while maintaining virtualization.
+- [x] Support dynamic sized grids.
+- [x] Improve recursive DFS algorithm using DP.
+- [ ] Respect user's "prefers-reduced-motion" settings using useReducedMotion from framer-motion.
+- [ ] Add new input to tweek the chances of a wall getting places when running `Math.floor(Math.random() * 3.5)`. Replace `3.5` with variable.
+- [ ] Make BFS run a faster, or the at very least provide a way to cancel the ongoing algorithm.
+- [ ] Show the current running state of the algorithm on the "solve" button. If algorithm is processing, disable the button or show a spinner.
+- [ ] Reduce the chunk size by code-splitting
+- [ ] The "insert walls randomly" button blocks main thread on large grids. Make it non blocking.
+- [ ] Center the grid inside the container while maintaining virtualization.
 
 ## Known Issues
 
 ## Acknowledgment
 
--   See [Maze-solving algorithms on wikipedia](https://en.wikipedia.org/wiki/Maze-solving_algorithm)
--   [Spanning Tree Youtube channel - Dijkstra's algorithm](https://www.youtube.com/watch?v=EFg3u_E6eHU)
--   [Texicab Geometry](https://en.wikipedia.org/wiki/Taxicab_geometry)
--   [Astar search algorithm](https://briangrinstead.com/blog/astar-search-algorithm-in-javascript/)
--   [CSS dot pattern background](https://codepen.io/edmundojr/pen/xOYJGw)
--   You can destructure using commans. [[, , value]](https://github.com/microsoft/TypeScript/issues/10571#issuecomment-242913490)
+- See [Maze-solving algorithms on wikipedia](https://en.wikipedia.org/wiki/Maze-solving_algorithm)
+- [Spanning Tree Youtube channel - Dijkstra's algorithm](https://www.youtube.com/watch?v=EFg3u_E6eHU)
+- [Texicab Geometry](https://en.wikipedia.org/wiki/Taxicab_geometry)
+- [Astar search algorithm](https://briangrinstead.com/blog/astar-search-algorithm-in-javascript/)
+- [CSS dot pattern background](https://codepen.io/edmundojr/pen/xOYJGw)
+- You can destructure using commans. [[, , value]](https://github.com/microsoft/TypeScript/issues/10571#issuecomment-242913490)
 
 ## License
 
